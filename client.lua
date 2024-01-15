@@ -1,4 +1,5 @@
 local visible = false
+local Core = exports['cs_lib']:GetLib()
 
 CreateThread(function()
     Citizen.Wait(2500)
@@ -33,3 +34,5 @@ CreateThread(function()
         end
     end
 end)
+
+Core.VersionCheck("https://raw.githubusercontent.com/CScripts-Network/cs_o2bar/main/version", 'cs_o2bar')

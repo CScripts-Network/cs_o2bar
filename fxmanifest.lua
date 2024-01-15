@@ -4,7 +4,7 @@ lua54 "yes"
 
 author 'CScripts Network'
 description 'CScripts Network O2 Bar'
-version '0.1.0'
+version '0.0.2'
 
 files {
     'web/html.html',
@@ -15,3 +15,7 @@ files {
 
 ui_page 'web/html.html'
 client_script "client.lua"
+
+dependencies {
+	'cs_lib'
+}
