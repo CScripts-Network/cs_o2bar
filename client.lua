@@ -1,5 +1,5 @@
 local visible = false
-local Core = exports['cs_lib']:GetLib()
+local UseCSLib = true -- Disable if you dont want version check ! COMMENT THE DEPENDENCY IN FXMANIFEST !
 
 CreateThread(function()
     Citizen.Wait(2500)
@@ -35,4 +35,8 @@ CreateThread(function()
     end
 end)
 
-Core.VersionCheck("https://raw.githubusercontent.com/CScripts-Network/cs_o2bar/main/version", 'cs_o2bar')
+if UseCSLib then
+    local Core = exports['cs_lib']:GetLib()
+    Core.VersionCheck("https://raw.githubusercontent.com/CScripts-Network/cs_o2bar/main/version", 'cs_o2bar')
+end
+
